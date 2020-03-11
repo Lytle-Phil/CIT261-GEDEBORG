@@ -1,8 +1,10 @@
 ## Welcome to My Fluency Evidence Page
 
-You can use the [editor on GitHub](https://github.com/Lytle-Phil/CIT261-GEDEBORG/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+You can inspect these files for fluency in their respective titles:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+1. [JavaScript](https://github.com/Lytle-Phil/CIT261-GEDEBORG/blob/master/JavaScript.html) to maintain and preview the content for your website in Markdown files.
+
+<!--Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.-->
 
 <!--### Markdown-->
 
