@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My JavaScript Examples</h1>
+<h2>Loops, Conditional Statements, Functions, Parameters, Arrays, Associative Arrays</h2>
+<!-- Button OBJECT with FUNCTION-->
+<button type="button"
+onclick="postDate()">
+Click me to start the demo</button>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+
+<script type="text/javascript">
+	// FUNCTIONS
+	// Uses VARIABLES througout [int hr, String textOut, int chime, etc.]
+	function postGreeting() {
+		// Display "Good Day!" if the hour of day is before 6PM (CONDITIONAL STATEMENTS)
+		if (new Date().getHours() < 18) {
+			document.getElementById("demo2").innerHTML = "Good day!";
+		}
+		else document.getElementById("demo2").innerHTML = "Good Evening!";
+		doLoops();
+
+	}
+	function postDate() {
+		document.getElementById('demo1').innerHTML = Date();
+		postGreeting();
+	}
+	function doLoops() {
+		var hr = new Date().getHours();
+		var textOut = "There are " + (24 - hr) + " hours until Midnight <br>";
+		// Show a FOR loop example accessing an ARRAY 
+		var hrs = ["12 AM","1 AM","2 AM","3 AM","4 AM","5 AM","6 AM","7 AM","8 AM","9 AM","10 AM","11 AM","12 PM","1 PM","2 PM","3 PM","4 PM","5 PM","6 PM","7 PM","8 PM","9 PM","10 PM","11 PM","Midnight"];
+		for (var i = hr + 1 ; i <= 24; i++) {
+			textOut += hrs[i] + "<br>";
+		}
+		textOut += "<br>Then the clock will sound 12 times: <br>";
+		var chime = 0;
+		// Demonstrate the WHILE loop
+		while (chime < 12) {
+			textOut += "Bong!...";
+			chime++;
+		}
+		textOut += "<br>";
+		document.getElementById('demo3').innerHTML = textOut;
+		showAssociative();
+	}
+	function showAssociative() {
+		var textOut = "";
+		// Associative arrays (with named indexes) in JavaScript are supported as objects.
+		var hatObject = {hatType:"fez", headSize:7, hatMaterial:"felt", adornment:"tassel"};
+		textOut += "Take off your " + hatObject["adornment"] + "ed, " + hatObject["hatMaterial"] + " " + hatObject["hatType"] + " and bow your size " + hatObject["headSize"] + " head.<br>";
+		document.getElementById('demo4').innerHTML = textOut;
+		// Alternatively, I could use the Map() object to store key/value pairs. More on this when I cover localStorage.
+	} 
+</script>
+
+</body>
+</html> 
