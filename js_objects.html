@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My JavaScript Objects Example</h1>
+<h2>Psuedoclassical Instantiation of Object</h2>
+<!-- Button OBJECT with FUNCTION-->
+<p id="demo1"></p>
+
+<button type="button"
+onclick="me.sayHi()">
+Invoke Object Method</button>
+
+
+<p id="demo2"></p>
+
+<script type="text/javascript">
+	// FUNCTIONS
+	var Person = function(firstName, lastName, age, nationality) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+		this.nationality = nationality;
+	}
+
+	Person.prototype.viewObject = function() {
+		document.getElementById("demo1").innerHTML = Person;
+	},
+
+	Person.prototype.sayHi = function() {
+		document.getElementById("demo2").innerHTML = "Hi, I'm " + me.firstName + " " + me.lastName + ", a " + me.age + " year-old aspiring " + me.nationality + " software developer.";
+	}
+
+	// implementation of pseudoclassical instantiation
+	var me = new Person('Phil', 'Lytle', 50, 'American');
+	me.viewObject();
+</script>
+<h4 id="demo_source"><br><br>(Adapted from www.jenniferbland.com & dailyJS.com)</h4>
+</body>
+</html>
