@@ -52,10 +52,14 @@ Click me to start the demo</button>
 	function showAssociative() {
 		var textOut = "";
 		// Associative arrays (with named indexes) in JavaScript are supported as objects.
-		var hatObject = {hatType:"fez", headSize:7, hatMaterial:"felt", adornment:"tassel"};
+		// Alternatively, I could use the Map() object to store key/value pairs. More on this when I cover localStorage.
+		var hat = {hatType:"fez", headSize:7, hatMaterial:"felt", adornment:"tassel"};
+		// Using a PARAMETER
+		displayObject(hat);
+	}
+	function displayObject(hatObject) {
 		textOut += "Take off your " + hatObject["adornment"] + "ed, " + hatObject["hatMaterial"] + " " + hatObject["hatType"] + " and bow your size " + hatObject["headSize"] + " head.<br>";
 		document.getElementById('demo4').innerHTML = textOut;
-		// Alternatively, I could use the Map() object to store key/value pairs. More on this when I cover localStorage.
 	} 
 </script>
 
