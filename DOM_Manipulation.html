@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+
+<title>Creating DOM Elements</title>
+
+</head>
+<body onload="createButton()">
+  <h1>DOM Element Manipulations</h1><br>
+  <button id="makeList" onclick="createList()">Create List</button><br><br>
+  <button onclick="removeButton()">Remove Spawned Button</button><br><br>
+  <button onclick="addToList()">Add To List</button><br><br>
+
+
+<script type="text/javascript">
+	var groceries= ["milk", "sugar", "eggs", "butter", "flour", "orange juice", "bacon"];
+	function createButton() {
+	    var by = document.getElementById("citation");      
+		var p = document.createElement("P");
+		p.innerHTML = "The button below and a blank paragraph were added when the page loaded";
+		document.body.insertBefore(p, by);
+		var btn = document.createElement("BUTTON");   
+		btn.innerHTML = "Spawned when page loaded";
+		btn.id = "initialB";
+		p.id = "initialP";
+		document.body.insertBefore(btn, by); 
+	}
+	function createList() {
+		var shopping = document.createElement("ul");
+		var by = document.getElementById("citation");
+		shopping.id = "list";
+    	shopping.innerHTML = "<h3>Shopping List</h3>";
+		document.body.insertBefore(shopping, by);
+		for (var i = 0; i < groceries.length; i++) {
+			var bag = document.createElement("li");
+	    	bag.id = "li" + (i + 1);
+			bag.innerHTML = groceries[i];
+			shopping.appendChild(bag);
+		}
+
+		document.body.removeChild(makeList);
+	}
+	function removeButton() {
+		var b= document.getElementById("initialB");
+	var c = document.getElementById("initialP");
+		if(document.body.contains(b) && document.body.contains(c) ) {
+	   		b.remove();
+		   	document.body.removeChild(c);
+		}
+		else {
+			alert("Nothing to remove");
+		}
+	
+	}
+	function addToList() {
+		var otherItems = ["vanilla extract","chocolate chips","peanut butter","sour cream","apples","lemmons","rice","frozen veggies","sirloin tips"]
+		var pick = Math.floor(Math.random() * otherItems.length)
+		var shopping = document.getElementById("list");
+		if(document.body.contains(shopping)) {
+			var li = document.createElement("li");
+	   		li.innerHTML = otherItems[pick];
+	   		var item = document.getElementById("li4");
+	   		shopping.insertBefore(li, item);
+		}
+		else {
+			alert("List does not exit");
+		}
+	}
+</script>
+<p id = "citation">(Adapted from W3Schools.com)</p>
+
+</body>
+
+</html>
