@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Using the XMLHttpRequest Object</h2>
+
+<div id="demo">
+<button type="button" onclick="loadXMLDoc()">Check Synonyms for Healthy</button>
+</div>
+
+<script>
+function loadXMLDoc() {
+
+	var data = null;
+
+	var xhr = new XMLHttpRequest();
+ xhr.withCredentials = true;
+
+	xhr.addEventListener("readystatechange", function () {
+		if (this.readyState === this.DONE) {
+			document.getElementById("demo").innerHTML = (this.responseText);
+		}
+	});
+
+	xhr.open("GET", "https://wordsapiv1.p.rapidapi.com/words/healthy/similarTo");
+	xhr.setRequestHeader("x-rapidapi-host", "wordsapiv1.p.rapidapi.com");
+	// please DO NOT duplicate this key [ get your own APIkey  =) ]
+	xhr.setRequestHeader("x-rapidapi-key", "b95eb7ad94msh101076791c5387bp1cce0cjsnc4b3c5063c16");
+
+	xhr.send(data);
+}
+</script>
+<p>(from wordsAPI.rapidAPI.com)
+</body>
+</html>
