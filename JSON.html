@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Create JSON string from a JavaScript object.</h2>
+
+<p id="demo1"></p>
+
+<h2>Create a JavaScript object from a JSON string.</h2>
+
+<p id="demo2"></p>
+
+<script>
+// create a relavent object
+var obj = { name: "Phil Lytle", age: 50, city: "Greensboro, NC" };
+// stringify it
+var myJSON = JSON.stringify(obj);
+document.getElementById("demo1").innerHTML = myJSON;
+// Convert JSON string back into a JS object then an array to display
+var newObj = JSON.parse(myJSON);
+var myArray = Object.values(newObj);
+document.getElementById("demo2").innerHTML = myArray;
+
+</script>
+<p>Adapted from W3Schools.com</p>
+</body>
+</html>
