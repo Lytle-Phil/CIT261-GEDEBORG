@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+  function changeText() {
+    
+       document.getElementById("getTunes").innerHTML = "Playing";
+
+}
+function pausePlay() {
+    document.getElementById("getTunes").innerHTML = "Paused";
+}
+function useCanvas() {
+     var c = document.getElementById("activeCanvas");
+     var ctx = c.getContext("2d");
+     ctx.clearRect(0, 0, 800, 450);
+     var img = document.getElementById("mars");
+     ctx.drawImage(img,10,10);
+}
+function text() {
+    var c = document.getElementById("activeCanvas");
+    var ctx = c.getContext("2d");
+    ctx.clearRect(0, 0, 800, 450);
+    ctx.font = "68px Arial";
+    ctx.fillText("Here be Martians...",68, 256);
+
+}
+function shading() {
+    var c = document.getElementById("activeCanvas");
+    var ctx = c.getContext("2d");
+    ctx.clearRect(0, 0, 800, 450);
+    // Create gradient
+    var grd = ctx.createLinearGradient(0,0,800,450);
+    grd.addColorStop(0,"orange");
+    grd.addColorStop(.5,"red");
+    grd.addColorStop(1,"yellow");
+
+    // Fill with gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(10,10,780,420);
+
+}
+</script>
+<style>
+#mars {
+    border: 2px solid black;
+}
+</style>
+<title>CSS Transition</title>
+</head>
+<body>
+  <video width="640" controls>
+    <source src="Travels2018.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+    <div>
+        <img id="mars" src="occupyMars.jpg" alt="SpaceX" width="180" height="22"><br>
+      <canvas id="activeCanvas" width="800" height="450" style="border:1px solid  black;"></canvas>
+      <p id="buttons"><button onclick="useCanvas()">Picture</button>    <button onclick="text()">Text</button>    <button onclick="shading()">Gradient</button></p>
+    </div>
+     <div>
+      <audio controls id="myAudio" onplay="changeText()" onpause="pausePlay()" >
+         <source src="areyougonnabemymuppet.mp3" type="audio/mpeg" >
+         Your browser does not support this type of audio.
+      </audio>
+        <p id="getTunes" >Are You Gonna Be...My Muppet</p>
+    </div>
+</body>
+</html>
