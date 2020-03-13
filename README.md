@@ -7,7 +7,7 @@ You can inspect these files for fluency in their respective titles:
 3. [JSON](https://github.com/Lytle-Phil/CIT261-GEDEBORG/blob/master/JSON.html)
 4. [AJAX](https://github.com/Lytle-Phil/CIT261-GEDEBORG/blob/master/AJAX.html)
 5. [Local Storage](https://github.com/Lytle-Phil/CIT261-GEDEBORG/blob/master/localStorage.html)
-5. [DOM: Document Object Model](https://github.com/Lytle-Phil/CIT261-GEDEBORG/blob/master/DOM_Manippulation.html)
+5. [DOM: Document Object Model](https://github.com/Lytle-Phil/CIT261-GEDEBORG/blob/master/DOM_Manipulation.html)
 6. [HTML5 Tags for Media](https://github.com/Lytle-Phil/CIT261-GEDEBORG/blob/master/media.html)
 
 <!--Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.-->
