@@ -4,6 +4,7 @@ You can inspect these files for fluency in their respective titles:
 
 1. [JavaScript](https://github.com/Lytle-Phil/CIT261-GEDEBORG/blob/master/JavaScript.html)
 2. [JavaScript Objects](https://github.com/Lytle-Phil/CIT261-GEDEBORG/blob/master/js_objects.html)
+3. [HTML5 Tags for Media](https://github.com/Lytle-Phil/CIT261-GEDEBORG/blob/master/media.html)
 
 <!--Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.-->
 
