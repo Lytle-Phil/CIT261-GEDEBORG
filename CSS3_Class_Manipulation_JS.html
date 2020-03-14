@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <style>
 .disableMenu { display: none; }
-.mystyle {
+.myStyle {
   width: 80px;
   height: 350px;
   background-color: coral;
@@ -24,15 +24,11 @@
   </ul>
   <script>
 function toggleMenu() { let divElement = document.querySelector("#dropDown");  
-//alert(divElement);
-                divElement.classList.toggle("disableMenu");
- //alert(divElement.classList); 
-                      }         
+  divElement.classList.toggle("disableMenu");
+}         
 function addWow() { let divElement = document.querySelector("#dropDown");  
-//alert(divElement);
-                divElement.classList.toggle("myStyle");
- //alert(divElement.classList); 
-                      }    
+  divElement.classList.toggle("myStyle");
+}    
   </script>
 
 </body>
