@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#myDIV {
+  width: 100px;
+  height: 100px;
+  background: orange;
+  -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+  transition: width 2s;
+}
+
+#myDIV:hover {
+  width: 500px;
+}
+#elOneExample {
+  transition: all 1s;
+}
+#elOneExample:hover {
+  transform: scale(1.5);
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 1em 2em;
+}
+img {
+  width: 100%;
+}
+.textContainer {
+  width: 100%;
+  max-width: 800px;
+  margin: 1em 0em;
+  padding: 0em;
+  text-align: left;
+  font: 2em arial, sans-serif;
+  transition: opacity 1s ease-out;
+}
+.circle {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin: 2em 1em;
+}
+.lime {
+  background: lime;
+}
+.hidden {
+  opacity: 0;
+}
+
+</style>
+</head>
+<body>
+<h1>JavaScript Events</h1>
+<h2>transitionend Event</h2>
+<p>Hover over the div element below, and wait for the transition effect to end.</p>
+
+<div id="myDIV"></div><br>
+<button id=btn1 onclick="resetDiv()">Reset</button>
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+<h3>Try touching the lime circle to toggle a hidden message</h3>
+<div id="elOneExample" class="circle lime"></div><div id="elOneId" class="textContainer hidden">
+  <p>Touch event registered - <br>  you revealed the hidden message!</p>
+</div>
+<p id="citation">(Adapted from W3Schools.com and Pako Gongora's demo)</p>
+<script>
+  //Get the node where we are going to place the event listener
+var exOne = document.querySelector('#elOneExample');
+
+//Adding the eventlistener type and invoke the callback function
+exOne.addEventListener('touchstart', clickExampleOne);
+
+//The callback function
+function clickExampleOne() {
+  //Get the element by its ID
+  var el = document.querySelector("#elOneId");
+  /*Toggling the class of the element, if it is present,
+    the class will be removed, if it not present will be 
+    added*/
+  el.classList.toggle("hidden");
+}
+
+// Code for Safari 3.1 to 6.0
+document.getElementById("myDIV").addEventListener("webkitTransitionEnd", myFunction);
+
+// Standard syntax
+document.getElementById("myDIV").addEventListener("transitionend", myFunction);
+
+function myFunction() {
+  this.innerHTML = "transitionend event occured - The transition has completed";
+  this.style.backgroundColor = "gold";
+}
+function resetDiv() {
+  document.getElementById("myDIV").innerHTML = "";
+  document.getElementById("myDIV").style.backgroundColor = "orange";  
+}
+
+</script>
+
+</body>
+</html>
