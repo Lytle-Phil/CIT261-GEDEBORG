@@ -4,9 +4,16 @@
 <meta charset="UTF-8">
 <style>
 .disableMenu { display: none; }
+.mystyle {
+  width: 80px;
+  height: 350px;
+  background-color: coral;
+  color: blue;
+  font-size: 25px;
+}  
   </style>
 <body>
-  <button id="btn1" onclick="toggleMenu()">Enable/Disable dropDown</button>
+  <button id="btn1" onclick="toggleMenu()">Enable/Disable dropDown</button>     <button id="btn2" onclick="addWow()">Give/Take List Pizzaz</button>
 <ul id="dropDown"> 
    <li>One</li> 
    <li>Two</li> 
@@ -20,7 +27,12 @@ function toggleMenu() { let divElement = document.querySelector("#dropDown");
 //alert(divElement);
                 divElement.classList.toggle("disableMenu");
  //alert(divElement.classList); 
-                      }                       
+                      }         
+function addWow() { let divElement = document.querySelector("#dropDown");  
+//alert(divElement);
+                divElement.classList.toggle("myStyle");
+ //alert(divElement.classList); 
+                      }    
   </script>
 
 </body>
