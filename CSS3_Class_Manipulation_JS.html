@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<style>
+.disableMenu { display: none; }
+  </style>
+<body>
+  <button id="btn1" onclick="toggleMenu()">Enable/Disable dropDown</button>
+<ul id="dropDown"> 
+   <li>One</li> 
+   <li>Two</li> 
+   <li>Three</li> 
+   <li>Four</li> 
+   <li>Five</li> 
+  <li>Six</li> 
+  </ul>
+  <script>
+function toggleMenu() { let divElement = document.querySelector("#dropDown");  
+//alert(divElement);
+                divElement.classList.toggle("disableMenu");
+ //alert(divElement.classList); 
+                      }                       
+  </script>
+
+</body>
+</html>
