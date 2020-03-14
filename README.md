@@ -9,7 +9,8 @@ You can inspect these files for fluency in their respective titles:
 5. [Local Storage](https://github.com/Lytle-Phil/CIT261-GEDEBORG/blob/master/localStorage.html)
 6. [DOM: Document Object Model](https://github.com/Lytle-Phil/CIT261-GEDEBORG/blob/master/DOM_Manipulation.html)
 7. [CSS3 Using JavaScript](https://github.com/Lytle-Phil/CIT261-GEDEBORG/blob/master/CSS3_Class_Manipulation_JS.html)
-8. [HTML5 Tags for Media](https://github.com/Lytle-Phil/CIT261-GEDEBORG/blob/master/media.html)
+8. [JavaScript Events](https://github.com/Lytle-Phil/CIT261-GEDEBORG/blob/master/JS_events.html)
+9. [HTML5 Tags for Media](https://github.com/Lytle-Phil/CIT261-GEDEBORG/blob/master/media.html)
 
 <!--Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.-->
 
