@@ -41,9 +41,10 @@ xSVG-Animation  - courtesy of Brett Starks brettzen.github.io
   content: "";
   max-width: 100px;
   padding: 160px 198px 0;
-  position: relative;
+  position: absolute;
+  z-index; -1;
   animation: float 5s infinite ease;
-  margin: 0 auto -4px; }
+  margin: -20 auto -40px; }
 
 .floatingX {
   background-image: url("X.svg");
@@ -51,9 +52,10 @@ xSVG-Animation  - courtesy of Brett Starks brettzen.github.io
   content: "";
   max-width: 100px;
   padding: 155px 80px 0;
-  position: relative;
+  position: ab;
+  z-index; -1;
   animation: float 7s infinite ease;
-  margin: 0 300 -4px; }
+  margin: -20 300 -40px; }
  
 @keyframes float {
   0% {
