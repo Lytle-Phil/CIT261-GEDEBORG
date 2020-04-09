@@ -36,7 +36,7 @@ xSVG-Animation  - courtesy of Brett Starks brettzen.github.io
 
 -------------------------------- */
 .page-wrapper::before {
-  background-image: url("http://brettzen.github.io/assets/pirate-ship2.svg");
+  background-image: url("O.svg");
   background-repeat: no-repeat;
   content: "";
   max-width: 160px;
