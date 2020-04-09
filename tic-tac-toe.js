@@ -1,3 +1,5 @@
+// game engine adapted from https://mitchum.blog Tic-Tac-Toe
+
 var winConditions = [ [0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6] ];
 var squareCount = 9;
 var squares = document.getElementsByClassName("square");
@@ -36,7 +38,7 @@ var restartGame = function()
 	{
 		var square = document.getElementById( id );
 		square.innerHTML = "";
-		square.style.backgroundColor = "rgb(0, 0, 0)";
+		square.style.backgroundColor = "";
 	}
 }
 
