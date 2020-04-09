@@ -35,23 +35,26 @@ body {
 xSVG-Animation  - courtesy of Brett Starks brettzen.github.io
 
 -------------------------------- */
-.page-wrapper::before {
+.floatingO {
   background-image: url("O.svg");
   background-repeat: no-repeat;
   content: "";
-  max-width: 160px;
-  padding: 300px 150px 0;
+  max-width: 100px;
+  padding: 160px 198px 0;
   position: relative;
   animation: float 5s infinite ease;
-  margin: 0 auto -45px; }
-  @media only screen and (min-width: 768px) {
-    .page-wrapper::before {
-      padding: 300px 22% 0;
-      transform-origin: 22% center;
-      animation: sail 15s infinite ease;
-      margin: 0 0 -43px;
-      z-index: 0; } }
+  margin: 0 auto -4px; }
 
+.floatingX {
+  background-image: url("X.svg");
+  background-repeat: no-repeat;
+  content: "";
+  max-width: 100px;
+  padding: 155px 80px 0;
+  position: relative;
+  animation: float 7s infinite ease;
+  margin: 0 300 -4px; }
+ 
 @keyframes float {
   0% {
     transform: rotate(-2deg); }
@@ -59,28 +62,7 @@ xSVG-Animation  - courtesy of Brett Starks brettzen.github.io
     transform: rotate(3deg); }
   100% {
     transform: rotate(-2deg); } }
-@keyframes sail {
-  0% {
-    left: 0;
-    transform: rotate(-2deg); }
-  12.5% {
-    transform: rotate(3deg); }
-  25% {
-    transform: rotate(-2deg); }
-  37.5% {
-    transform: rotate(3deg); }
-  50% {
-    left: 75%;
-    transform: rotate(-2deg) rotateY(180deg); }
-  62.5% {
-    transform: rotate(3deg) rotateY(180deg); }
-  75% {
-    transform: rotate(-2deg) rotateY(180deg); }
-  87.5% {
-    transform: rotate(3deg) rotateY(180deg); }
-  100% {
-    left: 0;
-    transform: rotate(-2deg); } }
+
 
 main {
   max-width: 29rem;
